@@ -1,0 +1,14 @@
+﻿
+<html>
+    <head>
+        <title>Who Am I?</title>
+    </head>
+    @{
+        var remoteIp = Request.RemoteIp;
+        var forwardedForIp = Request.Headers["X-Forwarded-For"];
+    }
+    <body>
+        <p>Remote IP: @remoteIp</p>
+        <p>Forwarded For: @forwardedForIp</p>
+    </body>
+</html>
